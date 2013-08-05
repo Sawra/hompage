@@ -218,3 +218,14 @@ ul li {
 	font-size: 20px;
 	font-family: give you glory;
 }
+
+.stuff {
+	width: 180px;
+float: left;
+display: block;
+margin: 19px;
+}
+
+.stuff p {
+	font-size: 12px;
+}
