@@ -3,22 +3,72 @@ function setUp() {
 	
 	var buttons = document.getElementsByClassName("button");
 	var shape = document.getElementsByClassName("shape");
-
+	var stuff = document.getElementsByClassName("stuff");
+	var more = document.getElementsByClassName("more");
 	
 	for(var i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener("click", buttonClick, false);
 		
 	} 
+
+	for(var i = 0; i < stuff.length; i++) {
+		stuff[i].addEventListener("click", showStuff, false);
+		
+	}
+	for(var i = 0; i < more.length; i++) {
+		more[i].addEventListener("click", backShowStuff, false);
+	}
+	
 	
 		
 }
 
-function blur(e) {
-	alert("funker");
+function backShowStuff(e) {
+	var more = document.getElementsByClassName("more");
+	for(var i = 0; i < more.length; i++) {
+		more[i].style.top ="-600px";
+	}
+	var blur = document.getElementsByClassName("blur");
+	
+
+		for(var i = 0; i < blur.length; i++ ) {
+		blur[i].className = blur[i].className.replace("blur", '');
+		}
+		for(var i = 0; i < blur.length; i++ ) {
+		blur[i].className = blur[i].className.replace("blur", '');
+		}
+		for(var i = 0; i < blur.length; i++ ) {
+		blur[i].className = blur[i].className.replace("blur", '');
+		}
+		
+	
+	
+	var h1 = e.target.parentElement.parentElement.firstElementChild;
+	h1.className = h1.className.replace( "blur" , '' );
+}
+
+function showStuff(e) {
+	
+	var text = "more"+e.target.parentElement.id
+	var moreapp = document.getElementById(text);
+	var blur = moreapp.parentElement.getElementsByClassName("stuff");
+	var h1 = moreapp.parentElement.firstElementChild;
+	moreapp.style.top = "-200px";
+
+	for( var i = 0; i < blur.length; i++ ) {
+		blur[i].className ="stuff blur";
+	}
+	h1.className ="blur";
+
+	var body = document.getElementsByTagName("body")[0];
+	
+	
+
+	// all stuff be blured
 }
 
 function buttonClick(e) {
-	
+
 	console.log(e.target);
 	var button = e.target.id;
 	var first = document.getElementById("first");

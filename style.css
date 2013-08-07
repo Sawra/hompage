@@ -8,7 +8,7 @@ h1 {
 
 
 a {
-	color: black;
+	color: white;
 	text-decoration: none;
 }
 
@@ -17,6 +17,7 @@ ul {
 	padding:0;
 	list-style:none;
 	width: 613px;
+
 }
 
 ul li {
@@ -203,6 +204,7 @@ ul li {
 
 #footer {
 	font-family: give you glory;
+	/*position: fixed;*/
 }
 
 #second {
@@ -226,6 +228,49 @@ display: block;
 margin: 19px;
 }
 
-.stuff p {
-	font-size: 12px;
+.stuff:hover {
+	cursor: pointer;
 }
+
+.stuff p {
+	font-size: 9px;
+}
+
+#moreapp, #morerecce, #morevlf, #morechristian {
+	-webkit-transform: scale(1,1);
+		-webkit-transition-timing-function: ease-in;
+		-webkit-transition-duration: 1s;
+		-moz-transform: scale(1,1);
+		-moz-transition-timing-function: ease-in;
+		-moz-transition-duration: 1s;
+		transform: scale(1,1);
+		transition-timing-function: ease-in;
+		transition-duration: 1s;	
+	
+	/* display:inline ska bli display:none när det klickas*/;
+	position: absolute;
+width: 95%
+text-align: center;
+top: -604px;
+left: 0;
+background: rgba(250,250,250,0.6);
+padding: 33px;
+z-index: 600;
+max-height: 500px;
+overflow: scroll;
+}
+
+
+ DEt här ska hända när man klickar på stuff
+#third > h1 {
+	-webkit-filter: blur(8px);
+}
+.stuff.blur, .stuff{
+	
+
+}
+
+.blur {
+	-webkit-filter: blur(2px);
+}
+
